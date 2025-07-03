@@ -47,10 +47,6 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "prettier": "@cqfe/prettier-config",
-  "eslintConfig": {
-    "extends": "@cqfe/eslint-config"
-  },
   "stylelint": {
     "extends": "@cqfe/stylelint-config"
   },
