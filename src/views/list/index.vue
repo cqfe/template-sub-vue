@@ -7,9 +7,16 @@
         </a-space>
       </template>
     </TableSearch>
-    <a-table :columns="[]" row-key="id" :loading="loading" :data-source="dataSource" :pagination="pagination"
+    <a-table
+      :columns="[]"
+      row-key="id"
+      :loading="loading"
+      :data-source="dataSource"
+      :pagination="pagination"
       :scroll="{ x: `calc(90vw - 100px)`, y: `calc(100vh - 320px)` }"
-      :row-selection="{ selectedRowKeys, onChange: onTableSelectChange }" @change="onTableChange"></a-table>
+      :row-selection="{ selectedRowKeys, onChange: onTableSelectChange }"
+      @change="onTableChange"
+    ></a-table>
   </a-card>
 </template>
 
@@ -21,9 +28,7 @@ import { useState } from '@iot-os/hooks/useState'
 
 // 查询表单字段
 const fields = computed(() => {
-  return [
-    { name: 'name', placeholder: 'placeholder', type: 'input' },
-  ]
+  return [{ name: 'name', placeholder: 'placeholder', type: 'input' }]
 })
 // 表格相关方法和数据
 const { dataSource, pagination, loading, fetchList, resetPage } = usePaginationReq(async () => ({

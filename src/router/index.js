@@ -14,7 +14,7 @@ const router = createRouter({
           name: 'List',
           component: () => import('../views/list/index.vue'),
         },
-      ]
+      ],
     },
   ],
 })
